@@ -1,3 +1,26 @@
 <p>
   {{ tulos }}
 </p>
+
+<p>
+  {{ testitulos }}
+</p>
+<!--<p>
+  <img [src]="apitulos">
+</p>-->
+<p>Tulostetaan avainsanoja:</p>
+<p *ngFor="let tulos of tulokset">
+  {{ tulos.name.fi }}
+</p>
+
+<p>Tulostetaan paikkoja ja niiden osoitteita:</p>
+<p *ngFor="let tulos of osoitteet">
+  {{ tulos.name.fi }} <br> {{ tulos.street_address.fi }}
+</p>
+
+<p>Tulostetaan Eventtejä:</p>
+<p *ngFor="let tulos of eventit">
+  {{ tulos.name.fi }} <br> {{ tulos.short_description.fi }}
+  <br>
+  {{ tulos.location.name.fi }}, {{ tulos.location_extra_info.fi }}
+</p>
